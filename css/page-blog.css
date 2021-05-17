@@ -1,0 +1,17 @@
+section {
+    display: grid;
+    gap: var(--l);
+    padding: 0 var(--m) var(--xl);
+}
+
+@media only screen and (min-width: 768px) {
+    section {
+        padding: 0 var(--l) var(--xl);
+    }
+}
+
+@media only screen and (min-width: 992px) {
+    section {
+        padding: 0 var(--xl) var(--xl);
+    }
+}
