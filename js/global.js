@@ -15,7 +15,7 @@ async function fetchApi() {
         const users = await (await fetch(apiUrl + `users`)).json();
 
         // FavIcon
-        const favicon = media.filter((image) => image.slug === "favicon").map((image) => image.source_url)[0];
+        const favicon = media.filter((image) => image.slug === "da_favicon").map((image) => image.source_url)[0];
         document.querySelector("head").innerHTML += `<link rel="icon" href="${favicon}" type="image/gif" sizes="32x32">`;
 
         // Index
