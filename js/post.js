@@ -9,7 +9,7 @@ function article(article) {
         year: "numeric",
     });
 
-    console.log(article);
+    // console.log(article);
 
     document.querySelector("title").innerHTML += ` - ${article.title.rendered}`;
 

@@ -2,18 +2,18 @@
     --color01: hsl(220, 0%, 100%);
     --color02: hsl(220, 0%, 98%);
     --color03: hsl(220, 0%, 96%);
-    --color05: #0f3b57;
-    --color06: #0f5b8a;
-    --color07: #595959;
-    --color08: #a32929;
-    --color09: hsl(10, 76%, 59%);
+    --color05: hsl(203, 71%, 20%);
+    --color06: hsl(203, 80%, 30%);
+    --color07: hsl(0, 0%, 35%);
+    --color08: hsl(0, 60%, 40%);
+    --color09: #d66161;
     --color10: hsl(10, 100%, 90%);
 
     --highlight01: hsla(0, 0%, 100%, 90%);
-    --shadow: hsla(220, 80%, 20%, 5%);
-    --shadowHover: hsla(220, 80%, 20%, 15%);
-    --shadow01: hsla(220, 80%, 5%, 80%);
-    --shadow02: hsla(220, 80%, 5%, 90%);
+    --shadow: #0f3b570d;
+    --shadowHover: #0f3b5726;
+    --shadow01: hsla(203, 71%, 5%, 80%);
+    --shadow02: hsla(203, 71%, 5%, 90%);
     --true: green;
     --false: #ff0000;
 }
