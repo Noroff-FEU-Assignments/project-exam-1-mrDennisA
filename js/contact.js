@@ -1,7 +1,6 @@
 const container = document.querySelector("#container");
 
 container.innerHTML = ` 
-
 <form>
     <div class="message shadow"><span>Your message has been successfully sent.</span></div>
     <h2 class="c07">.<span class="c06 spacing">${pageTitle02}</span></h2>
@@ -43,8 +42,7 @@ container.innerHTML = `
             <span class="contactMessage-message fs14">Please enter min 25 characters</span>    
         </div>
     </div>
-    <button class="h3 pointer">submit</button>
-   
+    <button class="h3 pointer">submit</button>  
 </form>`;
 
 // Validate Contact Form

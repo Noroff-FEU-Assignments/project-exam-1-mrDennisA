@@ -14,6 +14,8 @@ async function fetchApi() {
         const posts = await (await fetch(apiUrl + `posts?per_page=100&_embed`)).json();
         const users = await (await fetch(apiUrl + `users`)).json();
 
+        const json = await fetch(apiUrl);
+
         // FavIcon
         const favicon = media.filter((image) => image.slug === "da_favicon").map((image) => image.source_url)[0];
         document.querySelector("head").innerHTML += `<link rel="icon" href="${favicon}" type="image/gif" sizes="32x32">`;
@@ -33,7 +35,6 @@ async function fetchApi() {
         // Post
         if (extractName === "post") {
             const id = new URLSearchParams(document.location.search).get("id");
-
             if (id === null) {
                 location.href = "/";
             }
@@ -89,10 +90,7 @@ async function fetchApi() {
 }
 
 // HEAD
-const extractName = window.location.pathname
-    .split("/")
-    .pop()
-    .replace(/\/?.html/g, "");
+const extractName = window.location.pathname.replace(/\//g, "").replace(/.html/g, "");
 
 let pageName;
 let pageTitle01;
@@ -138,7 +136,7 @@ pageLoader.innerHTML = `
 
 function pageOffLoader() {
     setTimeout(() => {
-        pageLoader.style.display = "none";
+        pageLoader.innerHTML = "";
         container.style.display = "block";
 
         // Call Footer function

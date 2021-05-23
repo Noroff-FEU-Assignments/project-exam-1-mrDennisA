@@ -37,18 +37,12 @@ function validateWidth() {
 
 function index(media, pages, posts) {
     // Banner
-    const banner = document.querySelector(".banner");
-    pages.forEach((pages) => {
-        if (pages.slug === "welcome") {
-            media.forEach((media) => {
-                if (media.id === pages.featured_media) {
-                    banner.innerHTML = `
-                    <img src="${media.media_details.sizes.full.source_url}" alt="${media.alt_text}">
-                    <p class="h4 fw600">${pages.content.rendered.replace(/<\/?p>/g, "")}</p>`;
-                }
-            });
-        }
-    });
+    const bannerPage = pages.filter((value) => value.slug === "welcome").map((value) => value)[0];
+    const bannerImage = media.filter((value) => value.id === bannerPage.featured_media).map((value) => value)[0];
+
+    document.querySelector(".banner").innerHTML = `
+    <img src="${bannerImage.media_details.sizes.full.source_url}" alt="${bannerImage.alt_text}">
+    <p class="h4 fw600">${bannerPage.content.rendered.replace(/<\/?p>/g, "")}</p>`;
 
     const arrowSideLeft = document.querySelector("#arrowSideLeft");
     const arrowSideRight = document.querySelector("#arrowSideRight");

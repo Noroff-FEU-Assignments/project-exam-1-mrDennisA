@@ -14,7 +14,7 @@ function article(data) {
                 month: "long",
                 day: "numeric",
             });
-            style = "background-image: url('img_girl.jpg');";
+
             articleContainer.innerHTML += `
                 <article>
                     <a href="./post.html?id=${data[i].id}">
